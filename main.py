@@ -85,7 +85,7 @@ def main():
         ascending_times.append(asc_time)
         descending_times.append(desc_time)
 
-    plot_graph(array_sizes, average_times, ascending_times, descending_times)
+    plot_graph(sort_function, array_sizes, average_times, ascending_times, descending_times)
 
 if __name__ == "__main__":
     main()

@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-def plot_graph(array_sizes, average_times, ascending_times, descending_times):
+def plot_graph(sort_function, array_sizes, average_times, ascending_times, descending_times):
     plt.figure(figsize=(10, 6))
     plt.plot(array_sizes, average_times, label="Average Case", color='r', marker='o')
     plt.plot(array_sizes, ascending_times, label="Ascending Order", color='b', marker='o')
@@ -8,7 +8,7 @@ def plot_graph(array_sizes, average_times, ascending_times, descending_times):
 
     plt.xlabel('Input Size')
     plt.ylabel('Time (seconds)')
-    plt.title('Performance for Different Input Sizes')
+    plt.title(f'Performance of {sort_function.__name__} for Different Input Sizes')
     plt.legend()
     plt.grid(True)
     plt.show()
